@@ -20,7 +20,7 @@ environment {
         stage('test') {
             steps {
                 echo "---------------- Unit Test started -------------"
-                sh 'mvn surefix-report:report'
+                sh 'mvn surefie-report:report'
                 echo "---------------- Unit Test Completed -------------"
             }
         }
