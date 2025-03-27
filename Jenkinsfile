@@ -11,7 +11,17 @@ environment {
     stages {
         stage('build') {
             steps {
+                echo "---------------- Build started -------------"
                 sh 'mvn clean deploy'
+                echo "---------------- Build Commpleted -------------"
+            }
+        }
+
+        stage('test') {
+            steps {
+                echo "---------------- Unit Test started -------------"
+                sh 'mvn surefix-report:report'
+                echo "---------------- Unit Test Completed -------------"
             }
         }
 
